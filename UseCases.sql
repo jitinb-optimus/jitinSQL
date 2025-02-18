@@ -82,5 +82,5 @@ d.Total_worked as Total_Worked_hrs,e.Activity_id,e.Activity_description as
 Last_worked_activity,e.Atten_end_hrs as Hrs_worked from 
 t_emp a join mycte b on b.Emp_id=a.Emp_id join myview1 c on c.Emp_id=b.Emp_id join 
 myview2 d on d.Emp_id=c.Emp_id join myview3 e on e.Emp_id=d.Emp_id where
-c.rank=1 and abs(b.New_salary-c.New_salary)!=0 and e.rank=2;
+c.rank=1 and abs(b.New_salary-c.New_salary)!=0  and b.New_salary<c.New_salary and e.rank=2;
 
